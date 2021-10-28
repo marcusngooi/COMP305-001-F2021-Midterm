@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private bool isGrounded = false;
     private bool isFacingRight = true;
+    private bool isDucking = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,13 +39,13 @@ public class PlayerController : MonoBehaviour
         }
 
         // Duck code
-        if (isGrounded && Input.GetAxis("Vertical") < 0)
+        if (isGrounded && Input.GetAxis("Vertical") < 0 && rBody.velocity.x == 0)
         {
-            anim.SetBool("isDucking", true);
+            isDucking = true;
         }
         else
         {
-            anim.SetBool("isDucking", false);
+            isDucking = false;
         }
 
         // Run code
@@ -60,6 +61,7 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("xSpeed", Mathf.Abs(rBody.velocity.x));
         anim.SetFloat("ySpeed", rBody.velocity.y);
         anim.SetBool("isGrounded", isGrounded);
+        anim.SetBool("isDucking", isDucking);
     }
 
     private bool GroundCheck()
