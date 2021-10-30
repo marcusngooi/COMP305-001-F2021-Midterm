@@ -10,12 +10,12 @@ public class Opener : MonoBehaviour
     [SerializeField] private GameObject spawner;
 
     // Private variables
-    private bool inRange = false;
+    private bool isInRange = false;
 
     // Update is called once per frame
     void Update()
     {
-        if (inRange && Input.GetKeyDown(KeyCode.E))
+        if (isInRange && Input.GetKeyDown(KeyCode.E))
         {
             chestClosedObj.SetActive(false);
             chestOpenedObj.SetActive(true);
@@ -28,11 +28,11 @@ public class Opener : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            inRange = true;
+            isInRange = true;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        inRange = false;
+        isInRange = false;
     }
 }

@@ -77,27 +77,4 @@ public class PlayerController : MonoBehaviour
 
         isFacingRight = !isFacingRight;
     }
-
-    //private void OnCollisionEnter2D(Collision2D other)
-    //{
-    //    // "Kill" player if they touch a spike
-    //    if (other.gameObject.CompareTag("Spike"))
-    //    {
-    //        this.transform.position = new Vector3(-5.0f, -0.5700001f, 0.0f);
-    //    }
-
-    //    // Prevent player from sliding off platform
-    //    if (other.gameObject.CompareTag("Platform"))
-    //    {
-    //        this.transform.parent = other.transform;
-    //    }
-    //}
-
-    //private void OnCollisionExit2D(Collision2D other)
-    //{
-    //    if (other.gameObject.CompareTag("Platform"))
-    //    {
-    //        this.transform.parent = null;
-    //    }
-    //}
 }
