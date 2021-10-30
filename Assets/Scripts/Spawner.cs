@@ -7,11 +7,11 @@ public class Spawner : MonoBehaviour
     // "Public variables
     [SerializeField] private GameObject objectToSpawn;
     [SerializeField] private GameObject objectSpawner;
-    [SerializeField] private float jumpForce = 750f;
+    [SerializeField] private float jumpForce = 5000f;
 
     // Private variables
     private float timer = 0;
-    private float spawnRate = 0.10f;
+    private float spawnRate = 0.05f;
     private bool isChestOpened = false;
 
     // Update is called once per frame

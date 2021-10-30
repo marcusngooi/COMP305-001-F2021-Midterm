@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     // "Public" variables
     [SerializeField] private float speed = 10.0f;
-    [SerializeField] private float jumpForce = 500.0f;
+    [SerializeField] private float jumpForce = 700.0f;
     [SerializeField] private float groundCheckRadius = 0.15f;
     [SerializeField] private Transform groundCheckPos;
     [SerializeField] private LayerMask whatIsGround;
